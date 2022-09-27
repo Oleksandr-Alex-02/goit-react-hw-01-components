@@ -1,5 +1,29 @@
-@import-normalize;
+/* @import-normalize; */
 /* bring in normalize.css styles */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+a {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  background-size: cover;
+}
 
 body {
   margin: 0;
@@ -8,6 +32,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ededed;
 }
 
 code {
