@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function Statistics(props) {
   const { stats, title } = props
 
@@ -19,4 +21,11 @@ export default function Statistics(props) {
   );
 }
 
+Statistics.prototype = {
+  stats: PropTypes.array,
+  title: PropTypes.string,
+}
+
 const colorRandom = Math.floor(Math.random() * 16777215).toString(16)
+console.log(colorRandom)
+
