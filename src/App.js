@@ -1,5 +1,7 @@
-import Profile from "./componenst/Profile.react/Profile";
-import user from "./user.json";
+import Profile from './componenst/Profile/Profile';
+import Statistics from 'componenst/Statistics/Statistics';
+import user from './componenst/Profile/user.json';
+import data from './componenst/Statistics/data.json';
 
 export default function App() {
   return (
@@ -13,7 +15,7 @@ export default function App() {
         views={user.stats.views}
         likes={user.stats.likes}
       />
-      ;
+      <Statistics stats={data} />;
     </div>
   );
 }
