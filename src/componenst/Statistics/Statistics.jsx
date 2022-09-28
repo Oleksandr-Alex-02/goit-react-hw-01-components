@@ -1,16 +1,22 @@
 export default function Statistics(props) {
-    const array = props.stats
-    
-    return  array.map(arr => {
-            return <section class="statistics">
-  <h2 className="title">Upload stats</h2>
-  <ul className="stat-list">
-    <li className="item">
-        <span className="label">{arr.label}</span>
-        <span className="percentage">{arr.percentage}%</span>
-    </li>
-  </ul>
-</section>
-    })
+  const { stats, title } = props
 
-} 
+  const li = stats.map((arr) =>
+    <li className="item" key={arr.id}>
+      <span className="label">{arr.label}</span>
+      <span className="percentage">{arr.percentage}%</span>
+    </li>
+  );
+
+  return (<section class="statistics">
+    <div className="stats_cont">
+      <h2 className="title">{title}</h2>
+      <ul className="stat-list">
+        {li}
+      </ul>
+    </div>
+  </section>
+  );
+}
+
+const colorRandom = Math.floor(Math.random() * 16777215).toString(16)

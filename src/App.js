@@ -15,7 +15,7 @@ export default function App() {
         views={user.stats.views}
         likes={user.stats.likes}
       />
-      <Statistics stats={data} />;
+      <Statistics title="UPLOAD STATS" stats={data} />
     </div>
   );
 }
