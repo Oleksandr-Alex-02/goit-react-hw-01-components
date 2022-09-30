@@ -10,15 +10,17 @@ export default function Statistics(props) {
     </li>
   );
 
-  return (<section class="statistics">
-    <div className="stats_cont">
-      <h2 className="title">{title}</h2>
-      <ul className="stat-list">
-        {li}
-      </ul>
-    </div>
-  </section>
-  );
+  if (li.length !== 0) {
+    return (<section class="statistics">
+      <div className="stats_cont">
+        <h2 className="title">{title}</h2>
+        <ul className="stat-list">
+          {li}
+        </ul>
+      </div>
+    </section>
+    );
+  }
 }
 
 Statistics.prototype = {
@@ -26,6 +28,5 @@ Statistics.prototype = {
   title: PropTypes.string,
 }
 
-const colorRandom = Math.floor(Math.random() * 16777215).toString(16)
-console.log(colorRandom)
 
+// const colorRandom = Math.floor(Math.random() * 16777215).toString(16)
