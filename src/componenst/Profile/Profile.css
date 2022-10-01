@@ -1,10 +1,10 @@
 .App {
-    margin-top: 50px;
+    margin: auto;
 }
 
 .profile {
     text-align: center;
-    margin: auto;
+    margin: 30px auto;
     width: 222px;
     border-radius: 5px;
     border: 1px solid;

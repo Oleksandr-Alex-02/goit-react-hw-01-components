@@ -1,0 +1,30 @@
+.friends {
+    margin: auto;
+    margin-bottom: 30px;
+    width: 800px;
+
+}
+
+.friends__avatar {
+    width: 100px;
+}
+
+.friends__list {
+    display: flex;
+
+}
+
+.friends__item {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 10px 5px 5px rgb(83, 49, 206);
+}
+
+.friends__status {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: rgb(21, 129, 39);
+    border-radius: 50%;
+}

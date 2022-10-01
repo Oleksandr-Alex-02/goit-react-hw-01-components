@@ -11,7 +11,7 @@ export default function TransactionHistory(props) {
         </tr>
     )
 
-    return (<table class="transaction-history">
+    return (<table className="table">
         <thead>
             <tr>
                 <th>Type</th>
@@ -19,7 +19,6 @@ export default function TransactionHistory(props) {
                 <th>Currency</th>
             </tr>
         </thead>
-
         <tbody>
             {tableLtems}
         </tbody>
