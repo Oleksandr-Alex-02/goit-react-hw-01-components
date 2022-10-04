@@ -4,30 +4,45 @@
 
 .friends__avatar {
     width: 100px;
+    margin-right: 10px;
 }
 
 .friends__list {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .friends__item {
-    width: 280px;
+    margin-bottom: 20px;
+    width: 250px;
     padding: 10px;
 
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
 
     border-radius: 5px;
-    box-shadow: 10px 5px 5px rgb(83, 49, 206);
+    box-shadow: 5px 5px 5px rgb(170, 164, 195);
+    background-color: rgb(207, 204, 204);
 }
 
 .friends__status {
+    margin-right: 10px;
     display: block;
     width: 20px;
     height: 20px;
-    background: rgb(21, 129, 39);
     border-radius: 50%;
+}
+
+.friend-online {
+    background: green;
+
+}
+
+.friend-ofOnline {
+    background: red;
+
 }
 
 .friends__avatar {
