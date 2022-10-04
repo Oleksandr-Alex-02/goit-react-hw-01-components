@@ -1,11 +1,14 @@
-/* .statistics {} */
+.statistics {
+    text-align: center;
+}
 
 .stats_cont {
+    margin-bottom: 30px;
     text-align: center;
-    margin: 30px auto;
     border: 1px solid;
     border-radius: 5px;
-    width: 350px;
+    display: inline-block;
+
 
 }
 
