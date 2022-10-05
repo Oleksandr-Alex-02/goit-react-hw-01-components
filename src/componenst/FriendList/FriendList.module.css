@@ -35,14 +35,12 @@
     border-radius: 50%;
 }
 
-.friend-online {
+.friend__online {
     background: green;
-
 }
 
-.friend-ofOnline {
+.friend__ofOnline {
     background: red;
-
 }
 
 .friends__avatar {

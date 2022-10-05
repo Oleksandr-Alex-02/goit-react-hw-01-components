@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import css from './Statistics.module.css'
 
 function bacColor() {
   const colorRandom = Math.floor(Math.random() * 16777215).toString(16)
@@ -11,17 +12,17 @@ export default function Statistics(props) {
   const li = stats.map((arr) => {
     const background = bacColor();
 
-    return < li className="item" style={{ backgroundColor: background }} key={arr.id} >
-      <span className="label">{arr.label}</span>
-      <span className="percentage">{arr.percentage}%</span>
+    return < li className={css.item} style={{ backgroundColor: background }} key={arr.id} >
+      <span className={css.label}>{arr.label}</span>
+      <span className={css.percentage}>{arr.percentage}%</span>
     </li >
   });
 
   if (li.length !== 0) {
-    return (<section className="statistics">
-      <div className="stats_cont">
-        <h2 className="title">{title}</h2>
-        <ul className="stat-list">
+    return (<section className={css.statistics}>
+      <div className={css.stats__cont}>
+        <h2 className={css.title}>{title}</h2>
+        <ul className={css.stat__list}>
           {li}
         </ul>
       </div>
@@ -30,8 +31,10 @@ export default function Statistics(props) {
   }
 }
 
-Statistics.prototype = {
-  stats: PropTypes.array,
-  title: PropTypes.string,
+Statistics.propTypes = {
+  stats: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+
+  })),
 }
 
