@@ -4,14 +4,6 @@ import css from './TransactionHistory.module.css'
 export default function TransactionHistory(props) {
     const { items } = props
 
-    const tableLtems = items.map((item) =>
-        <tr key={item.id}>
-            <td>{item.type}</td>
-            <td>{item.amount}</td>
-            <td>{item.currency}</td>
-        </tr>
-    )
-
     return (<table className={css.table}>
         <thead>
             <tr>
@@ -21,13 +13,23 @@ export default function TransactionHistory(props) {
             </tr>
         </thead>
         <tbody>
-            {tableLtems}
+            {items.map((item) =>
+                <tr key={item.id}>
+                    <td>{item.type}</td>
+                    <td>{item.amount}</td>
+                    <td>{item.currency}</td>
+                </tr>
+            )}
         </tbody>
     </table>)
 }
 
 TransactionHistory.propTypes = {
-    items: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.string.isRequired,
-    })),
+    items: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            type: PropTypes.string.isRequired,
+            amount: PropTypes.string.isRequired,
+            currency: PropTypes.string.isRequired,
+        })),
 }

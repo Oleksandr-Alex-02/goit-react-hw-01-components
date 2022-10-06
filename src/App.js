@@ -5,7 +5,7 @@ import TransactionHistory from 'componenst/TransactionHistory/TransactionHistory
 import user from './componenst/Profile/user.json';
 import data from './componenst/Statistics/data.json';
 import friends from './componenst/FriendList/friends.json';
-import transactions from './componenst/TransactionHistory/transactions.json'
+import transactions from './componenst/TransactionHistory/transactions.json';
 
 export default function App() {
   return (
