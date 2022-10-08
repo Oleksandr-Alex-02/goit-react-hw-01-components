@@ -4,10 +4,7 @@ import TransactionHistory from 'componenst/TransactionHistory/TransactionHistory
 import user from './componenst/Profile/user.json';
 import data from './componenst/Statistics/data.json';
 import transactions from './componenst/TransactionHistory/transactions.json';
-
 import Friend from 'componenst/FriendList/Friend';
-// import FriendList from './componenst/FriendList/FriendList';
-
 import friends from './componenst/FriendList/friends.json';
 
 
@@ -24,10 +21,7 @@ export default function App() {
         likes={user.stats.likes}
       />
       <Statistics title="UPLOAD STATS" stats={data} />
-      
       <Friend friends={friends} />
-      {/* <FriendList friends={friends} /> */}
-
       <TransactionHistory items={transactions} />
     </div>
   );
